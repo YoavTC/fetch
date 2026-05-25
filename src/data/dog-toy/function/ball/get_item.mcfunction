@@ -1,1 +1,1 @@
-give @s snowball[use_remainder={id:"minecraft:poisonous_potato",count:1,components:{"minecraft:custom_data":{ball:true},"minecraft:item_model":"heart_of_the_sea","!minecraft:consumable":{}}},use_cooldown={seconds:2,cooldown_group:"dogtoy"},custom_data={ball:true},max_stack_size=1,item_model="heart_of_the_sea"] 1
+loot give @s loot dog-toy:ball
