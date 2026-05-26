@@ -1,3 +1,12 @@
+# Check if closest pet wolf is already fetching a ball
+execute as @n[type=wolf,nbt={Passengers:[{id:"minecraft:iron_golem"}]}] run return run function dog-toy:ball/cancel_throw
+
+# Remove earier throw instance
+function dog-toy:ball/unload
+schedule clear dog-toy:ball/tick/air_tick
+schedule clear dog-toy:ball/tick/ground_tick
+schedule clear dog-toy:ball/tick/return_tick
+
 # Setup iron golem (wolf AI)
 summon iron_golem ~ ~ ~ {attributes:[{id:scale,base:0.0625},{id:"attack_damage", base:0}],Invulnerable:true,Health:1,active_effects:[{id:"invisibility",duration:-1,show_particles:false}]}
 ride @n[type=iron_golem] mount @n[type=wolf]
