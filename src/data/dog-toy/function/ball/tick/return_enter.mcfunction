@@ -2,7 +2,6 @@ say wolf caught ball!
 
 kill @n[type=item]
 
-# Move armor stand to player position
-tp @n[type=bat] @p
+effect give @n[type=wolf] speed infinite 1
 
 function dog-toy:ball/tick/return_tick
