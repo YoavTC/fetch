@@ -1,5 +1,5 @@
 # Check if ball still exists
-execute unless entity @n[type=item,nbt={Item:{components:{"minecraft:custom_data":{"ball":true}}}}] run return run function dog-toy:ball/delete
+execute unless entity @n[type=item,nbt={Item:{components:{"minecraft:custom_data":{"ball":true}}}}] run return run function dog-toy:ball/unload
 
 # Need to also kill snowball entity
 execute positioned as @n[type=bat] if entity @n[type=wolf,distance=..2] run return run function dog-toy:ball/tick/return_enter
