@@ -10,5 +10,8 @@ execute as @n[type=bat] run tp @s @n[type=item]
 # Re-apply aggro to iron golem
 data modify entity @n[type=iron_golem] angry_at set from entity @n[type=bat] UUID
 
+execute as @n[type=wolf] run scoreboard players add @s dog-toy.fetch_ball 1
+execute as @n[type=wolf] if score @s dog-toy.fetch_ball >= $seek_timeout dog-toy.fetch_ball run return run function dog-toy:ball/unload
+
 # Schedule next tick
 schedule function dog-toy:ball/tick/ground_tick 5t
