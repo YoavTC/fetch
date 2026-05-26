@@ -4,4 +4,4 @@ effect clear @n[type=wolf] speed
 
 function dog-toy:ball/unload
 
-function dog-toy:ball/spawn_item
+function dog-toy:ball/item/spawn
