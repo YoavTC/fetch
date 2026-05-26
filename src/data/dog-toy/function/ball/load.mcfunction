@@ -1,5 +1,5 @@
 # Setup iron golem (wolf AI)
-summon iron_golem ~ ~ ~ {attributes:[{id:"attack_damage", base:0}],Invulnerable:true,Health:1,active_effects:[{id:"invisibility",duration:-1,show_particles:false}]}
+summon iron_golem ~ ~ ~ {attributes:[{id:scale,base:0.0625},{id:"attack_damage", base:0}],Invulnerable:true,Health:1,active_effects:[{id:"invisibility",duration:-1,show_particles:false}]}
 ride @n[type=iron_golem] mount @n[type=wolf]
 
 effect give @n[type=wolf] speed infinite 0 true
