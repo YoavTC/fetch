@@ -16,6 +16,6 @@
     },
     
     "rewards": {
-        "function": "dog-toy:_events/throw"
+        "function": "dog-toy:_events/ball/throw"
     }
 }

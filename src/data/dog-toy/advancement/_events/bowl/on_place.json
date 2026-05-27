@@ -19,6 +19,6 @@
         }
     },
     "rewards": {
-        "function": "dog-toy:_events/place"
+        "function": "dog-toy:_events/bowl/place"
     }
 }
