@@ -1,0 +1,24 @@
+{
+    "criteria": {
+        "place": {
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": ["item_frame", "glow_item_frame"],
+                    "nbt": {
+                        "Facing":1,
+                        "Item": {
+                            "id": "minecraft:player_head",
+                            "components": {
+                                "minecraft:custom_data": {"a":"b"}
+                            }
+                        }
+                    } 
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "dog-toy:_events/place"
+    }
+}

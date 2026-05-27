@@ -1,3 +1,4 @@
+# Ball config
 scoreboard objectives add dog-toy.fetch_ball dummy
 scoreboard players reset * dog-toy.fetch_ball
 
