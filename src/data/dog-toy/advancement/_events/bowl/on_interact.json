@@ -1,0 +1,21 @@
+{
+    "criteria": {
+        "interact": {
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "interaction",
+                    "nbt": {
+                        "Tags": ["bowl.interaction"]
+                    }
+                },
+                "item": {
+                    "items": "#wolf_food"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "dog-toy:_events/bowl/interact"
+    }
+}
