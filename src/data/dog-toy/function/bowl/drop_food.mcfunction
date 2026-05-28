@@ -1,2 +1,1 @@
-# $say $(item)
-$summon item ~ ~ ~ {Item:$(item)}
+$summon item ~ ~ ~ {Item:$(item),PickupDelay:10,Motion:[0, 0.2, 0]}
