@@ -1,0 +1,1 @@
+$execute on passengers as @s[type=iron_golem] run data modify entity @s angry_at set from entity @n[type=bat,nbt={UUID:$(bat)}] UUID

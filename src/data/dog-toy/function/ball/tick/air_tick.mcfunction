@@ -1,11 +1,14 @@
+# Re-execute the function as the wolf entity
+execute unless entity @s[type=wolf] as @e[type=wolf,tag=ball.active] positioned as @s run return run function dog-toy:ball/tick/air_tick
+
 # Exit when snowball hits blocks (start ground tick)
 execute unless entity @n[type=snowball] run return run function dog-toy:ball/tick/ground_enter
 
 # Re-apply aggro to iron golem
-data modify entity @n[type=iron_golem] angry_at set from entity @n[type=bat] UUID
+function dog-toy:ball/tick/air_tick/set_aggro with entity @s data
 
 # Move armor stand
-execute as @n[type=bat] run tp @s @n[type=snowball]
+function dog-toy:ball/tick/air_tick/move_bat with entity @s data
 
 # Schedule next tick
 schedule function dog-toy:ball/tick/air_tick 1t
