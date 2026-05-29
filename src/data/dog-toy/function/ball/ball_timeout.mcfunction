@@ -1,4 +1,4 @@
-say >:(
+particle angry_villager ~ ~.5 ~ 0 0 0 0 1 force
 playsound minecraft:entity.wolf_puglin.whine neutral @a ~ ~ ~
 
 function dog-toy:ball/unload with entity @s

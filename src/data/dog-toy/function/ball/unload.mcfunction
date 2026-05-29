@@ -1,5 +1,3 @@
-say unloading..
-
 $tp @n[type=iron_golem,nbt={data:{wolf:$(UUID)}}] ~ ~-1000 ~
 $tp @n[type=bat,nbt={data:{wolf:$(UUID)}}] ~ ~-1000 ~
 
