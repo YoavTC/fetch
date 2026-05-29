@@ -2,7 +2,7 @@
 execute unless entity @s[type=wolf] as @e[type=wolf,tag=ball.active,tag=ball.tick_ground] positioned as @s run return run function dog-toy:ball/tick/ground_tick
 
 # Check if ball still exists
-execute unless entity @n[type=item,nbt={Item:{components:{"minecraft:custom_data":{"ball":true}}}}] run return run function dog-toy:ball/unload with entity @s data
+execute unless entity @n[type=item,nbt={Item:{components:{"minecraft:custom_data":{"ball":true}}}}] run return run function dog-toy:ball/unload with entity @s
 
 # Check if wolf caught ball
 execute if function dog-toy:ball/tick/ground_tick/check_caught run return run function dog-toy:ball/tick/return_enter
