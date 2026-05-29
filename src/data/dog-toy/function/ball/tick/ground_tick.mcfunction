@@ -1,17 +1,21 @@
+# Re-execute the function as the wolf entity
+execute unless entity @s[type=wolf] as @e[type=wolf,tag=ball.active,tag=ball.tick_ground] positioned as @s run return run function dog-toy:ball/tick/ground_tick
+
 # Check if ball still exists
-execute unless entity @n[type=item,nbt={Item:{components:{"minecraft:custom_data":{"ball":true}}}}] run return run function dog-toy:ball/unload
+execute unless entity @n[type=item,nbt={Item:{components:{"minecraft:custom_data":{"ball":true}}}}] run return run function dog-toy:ball/unload with entity @s data
 
-# Need to also kill snowball entity
-execute positioned as @n[type=bat] if entity @n[type=wolf,distance=..2] run return run function dog-toy:ball/tick/return_enter
+# Check if wolf caught ball
+execute if function dog-toy:ball/tick/ground_tick/check_caught run return run function dog-toy:ball/tick/return_enter
 
-# Move armor stand (just in case snowball moved after landing)
-execute as @n[type=bat] run tp @s @n[type=item]
+# Move bat (just in case snowball moved after landing)
+function dog-toy:ball/tick/ground_tick/move_bat with entity @s data
 
 # Re-apply aggro to iron golem
-data modify entity @n[type=iron_golem] angry_at set from entity @n[type=bat] UUID
+# data modify entity @n[type=iron_golem] angry_at set from entity @n[type=bat] UUID
+function dog-toy:ball/tick/ground_tick/set_aggro with entity @s data
 
-execute as @n[type=wolf] run scoreboard players add @s dog-toy.fetch_ball 1
-execute as @n[type=wolf] if score @s dog-toy.fetch_ball >= $seek_timeout dog-toy.fetch_ball run return run function dog-toy:ball/ball_timeout
+scoreboard players add @s dog-toy.fetch_ball 1
+execute if score @s dog-toy.fetch_ball >= $seek_timeout dog-toy.fetch_ball run return run function dog-toy:ball/ball_timeout
 
 # Schedule next tick
 schedule function dog-toy:ball/tick/ground_tick 5t
