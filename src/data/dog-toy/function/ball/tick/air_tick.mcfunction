@@ -10,5 +10,5 @@ function dog-toy:ball/tick/air_tick/set_aggro with entity @s data
 # Move armor stand
 function dog-toy:ball/tick/air_tick/move_bat with entity @s data
 
-# Schedule next tick
-schedule function dog-toy:ball/tick/air_tick 1t
+# Lower delay = wolf has higher accuracy when updating AI to the ball item's position
+schedule function dog-toy:ball/tick/air_tick 2t

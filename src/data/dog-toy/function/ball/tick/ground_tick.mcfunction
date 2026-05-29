@@ -17,5 +17,5 @@ function dog-toy:ball/tick/ground_tick/set_aggro with entity @s data
 scoreboard players add @s dog-toy.fetch_ball 1
 execute if score @s dog-toy.fetch_ball >= $seek_timeout dog-toy.fetch_ball run return run function dog-toy:ball/ball_timeout
 
-# Schedule next tick
-schedule function dog-toy:ball/tick/ground_tick 5t
+# Lower delay = wolf has higher accuracy when updating AI to the ball item's position
+schedule function dog-toy:ball/tick/ground_tick 10t

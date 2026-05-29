@@ -9,4 +9,5 @@ function dog-toy:ball/tick/return_tick/move_bat with entity @s data
 scoreboard players add @s dog-toy.fetch_ball 1
 execute if score @s dog-toy.fetch_ball >= $return_timeout dog-toy.fetch_ball run return run function dog-toy:ball/ball_timeout
 
-schedule function dog-toy:ball/tick/return_tick 3t
+# Lower delay = wolf has higher accuracy when chasing player to return ball
+schedule function dog-toy:ball/tick/return_tick 5t
