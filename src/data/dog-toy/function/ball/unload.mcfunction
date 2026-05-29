@@ -5,7 +5,11 @@ $tp @n[type=bat,nbt={data:{wolf:$(UUID)}}] ~ ~-1000 ~
 
 data remove entity @s data.ig
 data remove entity @s data.bat
+
 tag @s remove ball.active
+tag @s remove ball.tick_air
+tag @s remove ball.tick_ground
+tag @s remove ball.tick_return
 
 scoreboard players reset @s dog-toy.fetch_ball
 effect clear @s speed
