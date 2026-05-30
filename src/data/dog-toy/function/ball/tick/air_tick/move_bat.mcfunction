@@ -1,1 +1,1 @@
-$execute as @n[type=bat,nbt={UUID:$(bat)}] run tp @s @n[type=snowball]
+$execute as @n[type=bat,nbt={UUID:$(bat)}] run tp @s @n[type=snowball,nbt={Item:{components:{"minecraft:custom_data":{ball:1b}}}}]
