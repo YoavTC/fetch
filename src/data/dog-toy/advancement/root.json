@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "root": {
+            "trigger": "tick"
+        }
+    },
+    "display": {
+        "title": "Dog Toy",
+        "description": "Your pets deserve better!",
+        "background": "block/red_wool",
+        "icon": "bone",
+        "announce_to_chat": false,
+        "show_toast": false
+    }
+}

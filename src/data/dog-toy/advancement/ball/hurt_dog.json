@@ -1,0 +1,29 @@
+{
+    "criteria": {
+        "play_catch": {
+            "trigger": "player_hurt_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": {"Tags":["ball.active", "ball.tick_air"]}
+                },
+                "damage": {
+                    "source_entity": {
+                        "type": "player"
+                    },
+                    "type": {
+                        "direct_entity": {
+                            "type": "snowball"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "parent": "dog-toy:root",
+    "display": {
+        "title": "Accidents Happen",
+        "icon": "heart_of_the_sea",
+        "hidden": true,
+        "description": "Hit your dog accidentally with a ball"
+    }
+}

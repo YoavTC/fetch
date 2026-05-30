@@ -1,0 +1,13 @@
+{
+    "criteria": {
+        "play_catch": {
+            "trigger": "impossible"
+        }
+    },
+    "parent": "dog-toy:root",
+    "display": {
+        "title": "Play Catch",
+        "icon": "heart_of_the_sea",
+        "description": "Throw a ball around with your dog"
+    }
+}
