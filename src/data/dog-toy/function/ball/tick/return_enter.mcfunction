@@ -1,7 +1,7 @@
 tag @s remove ball.tick_ground
 tag @s add ball.tick_return
 
-kill @n[type=item]
+kill @n[type=item,nbt={Item:{components:{"minecraft:custom_data":{ball:1b}}}}]
 scoreboard players reset @s dog-toy.fetch_ball
 
 effect give @n[type=wolf] speed infinite 1
