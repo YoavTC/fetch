@@ -11,7 +11,7 @@ schedule clear dog-toy:ball/tick/ground_tick
 schedule clear dog-toy:ball/tick/return_tick
 
 # Setup iron golem (wolf AI) & store wolf's UUID in it's data
-summon iron_golem ~ ~ ~ {Tags:[ball.unset_ig],attributes:[{id:scale,base:0.0625},{id:"attack_damage", base:0}],Invulnerable:true,Health:1,active_effects:[{id:"invisibility",duration:-1,show_particles:false}]}
+summon iron_golem ~ ~ ~ {Tags:[ball.unset_ig],Silent:1b,attributes:[{id:scale,base:0.0625},{id:"attack_damage", base:0}],Invulnerable:true,Health:1,active_effects:[{id:"invisibility",duration:-1,show_particles:false}]}
 ride @n[type=iron_golem,tag=ball.unset_ig] mount @s
 
 data modify entity @n[type=iron_golem,tag=ball.unset_ig] data.wolf set from entity @s UUID
