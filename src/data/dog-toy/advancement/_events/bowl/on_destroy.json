@@ -1,0 +1,18 @@
+{
+    "criteria": {
+        "interact": {
+            "trigger": "player_hurt_entity",
+            "conditions": {
+                "entity": {
+                    "type": "interaction",
+                    "nbt": {
+                        "Tags": ["bowl.interaction"]
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "dog-toy:_events/bowl/destroy"
+    }
+}

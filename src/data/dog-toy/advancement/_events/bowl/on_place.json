@@ -8,7 +8,7 @@
                     "nbt": {
                         "Facing":1,
                         "Item": {
-                            "id": "minecraft:player_head",
+                            "id": "minecraft:poisonous_potato",
                             "components": {
                                 "minecraft:custom_data": {"a":"b"}
                             }

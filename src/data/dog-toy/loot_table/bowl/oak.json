@@ -1,0 +1,26 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:poisonous_potato",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "!food": {},
+                "!consumable": {},
+                "item_model": "bowl",
+                "custom_data": {
+                  "a": "b"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
