@@ -1,7 +1,7 @@
 advancement revoke @s only dog-toy:_events/ball/on_throw
 clear @s minecraft:poisonous_potato[minecraft:custom_data={ball:true}]
 
-execute unless entity @n[type=wolf,distance=..20] run return fail
+execute unless entity @n[type=wolf,distance=..20] run return run execute as @n[type=snowball,nbt={Item:{components:{"minecraft:custom_data":{ball:1b}}}}] run function dog-toy:no_dog_found
 
 tag @s add ball.threw
 
