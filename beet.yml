@@ -1,0 +1,7 @@
+data_pack:
+  pack_format: 121
+  name: Dog Toy
+  load:
+    - src
+
+author: Yoav TC
