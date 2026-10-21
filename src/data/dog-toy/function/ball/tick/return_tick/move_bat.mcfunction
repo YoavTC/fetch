@@ -1,1 +1,0 @@
-$execute as @n[type=bat,nbt={UUID:$(bat)}] run tp @s @p

@@ -1,0 +1,1 @@
+$execute as @n[type=bat,nbt={UUID:$(bat)}] at @s run kill @n[type=item,nbt={Item:{components:{"minecraft:custom_data":{ball:1b}}}},distance=..3]
