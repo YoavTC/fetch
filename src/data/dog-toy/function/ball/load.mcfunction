@@ -24,7 +24,7 @@ tag @n[type=iron_golem,tag=ball.unset_ig] add ball.ig
 tag @n[type=iron_golem,tag=ball.unset_ig,tag=ball.ig] remove ball.unset_ig
 
 # Setup bat (iron golem's target) & store wolf's UUID in it's data
-summon bat ~ ~ ~ {Tags:[ball.unset_bat],Silent:1b,NoAI:1b,Health:200f,active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:-1,show_particles:0b},{id:"minecraft:instant_health",amplifier:50,duration:-1,show_particles:0b}],attributes:[{id:"minecraft:max_health",base:200},{id:"minecraft:scale",base:1}]}
+summon bat ~ ~ ~ {Tags:[ball.unset_bat],Silent:1b,NoAI:1b,Health:200f,active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:-1,show_particles:0b},{id:"minecraft:instant_health",amplifier:50,duration:-1,show_particles:0b}],attributes:[{id:"minecraft:max_health",base:200},{id:"minecraft:scale",base:0.0625}]}
 
 data modify entity @n[type=bat,tag=ball.unset_bat] data.wolf set from entity @s UUID
 data modify entity @s data.bat set from entity @n[type=bat,tag=ball.unset_bat] UUID
