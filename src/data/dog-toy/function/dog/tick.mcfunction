@@ -1,5 +1,3 @@
-particle heart ~ ~2 ~
-
 # Check golem exists (somehow golem got killed)
 execute unless data entity @s Passengers[{id:"minecraft:iron_golem",Tags:["dog-toy.golem"]}] run return run function dog-toy:dog/unload
 

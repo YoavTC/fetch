@@ -1,5 +1,3 @@
-particle heart ~ ~2 ~
-
 # Always executes when not passenger!
 
 # If unclaimed, kill

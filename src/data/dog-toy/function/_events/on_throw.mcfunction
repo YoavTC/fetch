@@ -7,7 +7,7 @@ tag @s add dog-toy.throwing_player
 execute as @n[type=snowball,nbt={Item:{components:{"minecraft:custom_data":{"dog-toy.ball":true}}}},tag=!dog-toy.snowball] if function dog-toy:is_correct_snowball run tag @s add dog-toy.snowball
 
 # Summon bat & make it ride snowball
-summon interaction ~ ~ ~ {width:0,height:1.5,Tags:["dog-toy.interaction"],Passengers:[{id:"bat",Tags:["dog-toy.bat", "dog-toy.bat_temp", "dog-toy.unclaimed_bat"]}]}
+summon interaction ~ ~ ~ {width:0,height:1.5,Tags:["dog-toy.interaction"],Passengers:[{id:"bat",Tags:["dog-toy.bat", "dog-toy.bat_temp", "dog-toy.unclaimed_bat"],Silent:true,attributes:[{id:scale,base:0.0625}],DeathLootTable:"dog-toy:drop_air",NoAI:true,active_effects:[{id:invisibility,duration:-1,show_particles:false},{id:resistance,duration:-1,amplifier:255,show_particles:false}]}]}
 # summon bat ~ ~ ~ {NoAI:true,Tags:["dog-toy.bat", "dog-toy.bat_temp", "dog-toy.unclaimed_bat"]}
 execute as @n[type=bat,tag=dog-toy.bat,tag=dog-toy.bat_temp,tag=dog-toy.unclaimed_bat] on vehicle run ride @s mount @n[type=snowball,tag=dog-toy.snowball]
 # ride @n[type=bat,tag=dog-toy.bat,tag=dog-toy.bat_temp,tag=dog-toy.unclaimed_bat] mount @n[type=snowball,tag=dog-toy.snowball]
