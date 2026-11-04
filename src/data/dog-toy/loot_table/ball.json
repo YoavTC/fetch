@@ -15,7 +15,7 @@
 									"count": 1,
 									"components": {
 										"minecraft:custom_data": {
-											"ball": 1
+											"ball": true
 										},
 										"minecraft:item_model": "heart_of_the_sea",
 										"!minecraft:consumable": {}
