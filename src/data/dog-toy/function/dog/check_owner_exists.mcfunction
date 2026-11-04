@@ -1,0 +1,1 @@
+$execute store success storage dog-toy:temp owner_exists byte 1 run execute if entity @p[nbt={UUID:$(Owner)}]

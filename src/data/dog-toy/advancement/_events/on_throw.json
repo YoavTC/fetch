@@ -1,0 +1,20 @@
+{
+	"criteria": {
+		"throw": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "poisonous_potato",
+						"components": {
+							"custom_data": { "ball": true }
+						}
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "dog-toy:_events/on_throw"
+	}
+}

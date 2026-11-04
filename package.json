@@ -1,0 +1,16 @@
+{
+	"name": "dog-toy",
+	"version": "1.0.0",
+	"scripts": {
+		"build": "beet",
+		"dev": "tsx --env-file=.env scripts/dev.ts"
+	},
+	"author": "Yoav TC",
+	"devDependencies": {
+		"@types/node": "^26.6.5",
+		"prettier": "^3.9.10"
+	},
+	"dependencies": {
+		"tsx": "^4.23.15"
+	}
+}

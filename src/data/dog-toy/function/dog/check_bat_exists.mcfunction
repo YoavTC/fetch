@@ -1,0 +1,1 @@
+$execute store success storage dog-toy:temp bat_exists byte 1 run execute if entity @n[type=bat,tag=dog-toy.bat,nbt={UUID:$(bat)}]

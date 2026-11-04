@@ -1,0 +1,17 @@
+{
+	"pack": {
+		"description": [
+			{
+				"text": "dog-toy v1.0\n",
+				"color": "dark_gray"
+			},
+			{
+				"text": "www.yoavtc.work",
+				"color": "blue",
+				"underlined": true
+			}
+		],
+		"min_format": 121,
+		"max_format": 121
+	}
+}

@@ -1,0 +1,8 @@
+name: dog-toy
+description: Play fetch with your dog
+author: Yoav TC
+
+data_pack:
+  pack_format: 121
+  load:
+    - src
