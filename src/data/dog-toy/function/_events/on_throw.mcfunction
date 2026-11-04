@@ -17,3 +17,5 @@ execute if function dog-toy:find_dog run tag @n[type=bat,tag=dog-toy.unclaimed_b
 
 execute as @n[type=wolf,tag=dog-toy.dog_temp] run function dog-toy:dog/init
 execute as @n[type=bat,tag=dog-toy.bat_temp] run function dog-toy:bat/init
+
+tag @s remove dog-toy.throwing_player
