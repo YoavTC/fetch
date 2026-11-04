@@ -1,2 +1,3 @@
 # Storage
-data modify storage dog-toy:temp bat_exists set value false
+data remove storage dog-toy:temp bat_exists
+data remove storage dog-toy:temp owner_exists
