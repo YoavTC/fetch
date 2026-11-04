@@ -10,6 +10,7 @@ execute if entity @s[tag=dog-toy.stationary_bat] run return run function dog-toy
 
 # Move bat to sit on item
 summon item ~ ~1 ~ {Item:{id:"poisonous_potato"},Tags:["dog-toy.item_temp"]}
-ride @s mount @n[type=item,tag=dog-toy.item_temp]
+# ride @s mount @n[type=item,tag=dog-toy.item_temp]
+execute on vehicle run ride @s mount @n[type=item,tag=dog-toy.item_temp]
 data merge entity @n[type=item,tag=dog-toy.item_temp] {Tags:["dog-toy.item"]}
 tag @s add dog-toy.stationary_bat
