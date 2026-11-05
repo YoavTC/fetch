@@ -3,7 +3,7 @@ data remove storage dog-toy:temp bat_exists
 data remove storage dog-toy:temp owner_exists
 
 # Entities
-execute as @e[type=wolf,tag=dog-toy.active_dog] run function dog-toy:dog/unload
+execute as @e[type=wolf,tag=dog-toy.active_dog] positioned as @s run function dog-toy:dog/unload
 execute as @e[type=interaction,tag=dog-toy.interaction] on vehicle run function dog-toy:bat/unload
 execute as @e[type=bat,tag=dog-toy.bat] run function dog-toy:bat/unload
 kill @e[type=snowball,tag=dog-toy.snowball]
