@@ -5,7 +5,7 @@ function dog-toy:dog/unload_bat with entity @s data.dog-toy
 execute on passengers as @s[type=iron_golem,tag=dog-toy.golem] run tp @s ~ ~-1000 ~
 
 # If held item, drop it
-execute if entity @s[tag=dog-toy.reached_bat] run loot spawn ~ ~ ~ loot dog-toy:ball
+execute if entity @s[tag=dog-toy.reached_bat] run function dog-toy:item/drop_item with entity @s data.dog-toy
 
 tag @s remove dog-toy.active_dog
 tag @s remove dog-toy.reached_bat
