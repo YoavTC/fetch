@@ -1,6 +1,7 @@
 advancement revoke @s only dog-toy:_events/on_throw
 
 clear @s minecraft:poisonous_potato[minecraft:custom_data={ball:true}]
+function dog-toy:fx/throw_ball
 tag @s add dog-toy.throwing_player
 
 # Tag thrown snowball with "dog-toy.snowball"
