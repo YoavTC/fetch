@@ -1,0 +1,37 @@
+{
+	"type": "crafting_shaped",
+	"key": {
+		"X": "minecraft:heart_of_the_sea",
+		"R": "minecraft:resin_clump"
+	},
+	"pattern": [" R ", "RXR", " R "],
+
+	"result": {
+		"id": "snowball",
+		"components": {
+			"minecraft:use_remainder": {
+				"id": "minecraft:poisonous_potato",
+				"count": 1,
+				"components": {
+					"minecraft:custom_data": {
+						"ball": true
+					},
+					"minecraft:item_model": "heart_of_the_sea",
+					"!minecraft:consumable": {}
+				}
+			},
+			"minecraft:use_cooldown": {
+				"seconds": 2,
+				"cooldown_group": "dogtoy"
+			},
+			"minecraft:custom_data": "{dog-toy.ball:1b}",
+			"minecraft:max_stack_size": 1,
+			"minecraft:item_model": "heart_of_the_sea",
+			"minecraft:custom_name": {
+				"text": "Dog Toy",
+				"color": "aqua",
+				"italic": false
+			}
+		}
+	}
+}
