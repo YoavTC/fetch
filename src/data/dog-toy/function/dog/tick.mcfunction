@@ -1,3 +1,4 @@
+
 # Check golem exists (somehow golem got killed)
 execute unless data entity @s Passengers[{id:"minecraft:iron_golem",Tags:["dog-toy.golem"]}] run return run function dog-toy:dog/unload
 
@@ -7,6 +8,10 @@ execute if data storage dog-toy:temp {owner_exists:false} run return run functio
 
 # If distance was checked and dog is close enough to bat
 execute if entity @s[tag=dog-toy.reached_bat] run return run function dog-toy:dog/tick_return
+
+# Timeout
+scoreboard players add @s dog-toy.timeout 1
+execute if score @s dog-toy.timeout >= $fetch dog-toy.timeout run return run function dog-toy:dog/timeout
 
 # Check bat exists (ball picked up/destroyed)
 function dog-toy:dog/check_bat_exists with entity @s data.dog-toy

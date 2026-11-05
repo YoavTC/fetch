@@ -10,4 +10,5 @@ execute if entity @s[tag=dog-toy.reached_bat] run loot spawn ~ ~ ~ loot dog-toy:
 tag @s remove dog-toy.active_dog
 tag @s remove dog-toy.reached_bat
 data remove entity @s data.dog-toy
+scoreboard players reset @s dog-toy.timeout
 effect clear @s speed

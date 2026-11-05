@@ -13,3 +13,9 @@ execute as @a[tag=dog-toy.throwing_player] run tag @s remove dog-toy.throwing_pl
 execute as @e[type=bat,tag=dog-toy.bat_temp] run tag @s remove dog-toy.bat_temp
 execute as @e[type=wolf,tag=dog-toy.dog_temp] run tag @s remove dog-toy.dog_temp
 execute as @e[type=item,tag=dog-toy.item_temp] run tag @s remove dog-toy.item_temp
+
+# Scoreboards
+scoreboard objectives add dog-toy.timeout dummy
+scoreboard players reset * dog-toy.timeout
+scoreboard players set $fetch dog-toy.timeout 60
+scoreboard players set $return dog-toy.timeout 80
