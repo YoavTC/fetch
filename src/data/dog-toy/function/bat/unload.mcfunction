@@ -1,4 +1,4 @@
-execute if entity @s[tag=dog-toy.unclaimed_bat] run function dog-toy:item/drop_item
+execute if entity @s[tag=fetch.unclaimed_bat] run function fetch:item/drop_item
 
-execute on vehicle run kill @s[type=interaction,tag=dog-toy.interaction]
+execute on vehicle run kill @s[type=interaction,tag=fetch.interaction]
 tp @s ~ ~-1000 ~

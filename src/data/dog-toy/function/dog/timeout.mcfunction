@@ -1,2 +1,2 @@
-function dog-toy:fx/timeout
-function dog-toy:dog/unload
+function fetch:fx/timeout
+function fetch:dog/unload

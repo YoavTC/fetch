@@ -1,1 +1,1 @@
-$execute as @n[type=bat,tag=dog-toy.bat,nbt={UUID:$(bat)}] positioned as @s run function dog-toy:bat/unload
+$execute as @n[type=bat,tag=fetch.bat,nbt={UUID:$(bat)}] positioned as @s run function fetch:bat/unload

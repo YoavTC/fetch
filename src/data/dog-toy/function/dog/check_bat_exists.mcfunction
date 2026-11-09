@@ -1,1 +1,1 @@
-$execute store success storage dog-toy:temp bat_exists byte 1 run execute if entity @n[type=bat,tag=dog-toy.bat,nbt={UUID:$(bat)}]
+$execute store success storage fetch:temp bat_exists byte 1 run execute if entity @n[type=bat,tag=fetch.bat,nbt={UUID:$(bat)}]

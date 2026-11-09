@@ -1,3 +1,3 @@
-tag @s remove dog-toy.bat_temp
+tag @s remove fetch.bat_temp
 
-function dog-toy:tick_bats
+function fetch:tick_bats

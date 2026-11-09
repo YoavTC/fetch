@@ -1,1 +1,1 @@
-$execute positioned as @n[type=bat,tag=dog-toy.stationary_bat,nbt={UUID:$(bat)}] positioned ~ ~-1 ~ if entity @s[distance=..1.5] run function dog-toy:dog/reached_bat
+$execute positioned as @n[type=bat,tag=fetch.stationary_bat,nbt={UUID:$(bat)}] positioned ~ ~-1 ~ if entity @s[distance=..1.5] run function fetch:dog/reached_bat

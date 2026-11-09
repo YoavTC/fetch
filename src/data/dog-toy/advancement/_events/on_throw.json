@@ -15,6 +15,6 @@
 		}
 	},
 	"rewards": {
-		"function": "dog-toy:_events/on_throw"
+		"function": "fetch:_events/on_throw"
 	}
 }

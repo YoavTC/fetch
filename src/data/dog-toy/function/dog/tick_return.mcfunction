@@ -1,9 +1,9 @@
 # Timeout
-scoreboard players add @s dog-toy.timeout 1
-execute if score @s dog-toy.timeout >= $return dog-toy.timeout run return run function dog-toy:dog/timeout
+scoreboard players add @s fetch.timeout 1
+execute if score @s fetch.timeout >= $return fetch.timeout run return run function fetch:dog/timeout
 
 # Re-apply aggro to iron golem (onto player)
-execute on passengers as @s[type=iron_golem,tag=dog-toy.golem] run data modify entity @s angry_at set from entity @s data.dog-toy.player
+execute on passengers as @s[type=iron_golem,tag=fetch.golem] run data modify entity @s angry_at set from entity @s data.fetch.player
 
 # Check distance
-execute positioned as @s if function dog-toy:dog/check_distance_owner run function dog-toy:dog/reached_owner
+execute positioned as @s if function fetch:dog/check_distance_owner run function fetch:dog/reached_owner
