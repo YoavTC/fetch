@@ -35,22 +35,50 @@ jobs:
       - name: Install beet
         run: pip install beet
 
-      - name: Update pack.mcmeta description
+      - name: Bump version in project files
         run: |
+          if ! [[ "$RELEASE_VERSION" =~ ^[0-9]+(\.[0-9]+){0,2}$ ]]; then
+            echo "::error::Invalid release version '$RELEASE_VERSION' (expected e.g. 1.1 or 1.1.2)"
+            exit 1
+          fi
+
+          # package.json / package-lock.json require full semver (X.Y.Z), so pad e.g. 1.1 -> 1.1.0
+          IFS=. read -r major minor patch <<< "$RELEASE_VERSION"
+          SEMVER="${major}.${minor:-0}.${patch:-0}"
+
+          # src/pack.mcmeta
           jq --tab --arg text "$REPO_NAME v$RELEASE_VERSION"$'\n' \
             '.pack.description[0].text = $text' \
             src/pack.mcmeta > pack.mcmeta.tmp
           mv pack.mcmeta.tmp src/pack.mcmeta
-          cat src/pack.mcmeta
 
-      - name: Commit pack.mcmeta update
+          # beet.yml
+          if grep -q '^version:' beet.yml; then
+            sed -i "s/^version:.*/version: $SEMVER/" beet.yml
+          else
+            sed -i "/^author:.*/a version: $SEMVER" beet.yml
+          fi
+
+          # package.json
+          jq --tab --arg v "$SEMVER" '.version = $v' package.json > package.json.tmp
+          mv package.json.tmp package.json
+
+          # package-lock.json (top-level version and the root package entry)
+          jq --tab --arg v "$SEMVER" '.version = $v | .packages[""].version = $v' \
+            package-lock.json > package-lock.json.tmp
+          mv package-lock.json.tmp package-lock.json
+
+          git diff
+
+      - name: Commit and push version bump
         run: |
-          if git diff --quiet -- src/pack.mcmeta; then
-            echo "pack.mcmeta already at v$RELEASE_VERSION, nothing to commit"
+          FILES="src/pack.mcmeta beet.yml package.json package-lock.json"
+          if git diff --quiet -- $FILES; then
+            echo "Version files already at v$RELEASE_VERSION, nothing to commit"
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add src/pack.mcmeta
+            git add $FILES
             git commit -m "Release v$RELEASE_VERSION"
             git push origin "HEAD:${{ github.ref_name }}"
           fi
