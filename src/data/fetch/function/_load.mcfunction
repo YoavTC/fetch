@@ -19,3 +19,15 @@ scoreboard objectives add fetch.timeout dummy
 scoreboard players reset * fetch.timeout
 scoreboard players set $fetch fetch.timeout 60
 scoreboard players set $return fetch.timeout 80
+
+# Welcome message (runs once)
+execute if data storage fetch:const {"shown_welcome_message":true} run return 1
+data modify storage fetch:const shown_welcome_message set value true
+tellraw @a {text:""}
+tellraw @a [{text:"Fetch!",color:yellow,bold:true,italic:true},{text:" datapack installed!",color:red,bold:false,italic:false}]
+tellraw @a [{text:"Created by Yoav TC ",color:yellow},{"text":"(",color:"gray"},{text:"yoavtc.work",color:"aqua",underlined:true,hover_event:{action:"show_text",value:{text:"Click to check out my website!"}},click_event:{action:"open_url",url:"https://yoavtc.work/"}},{"text":")",color:"gray"}]
+tellraw @a {text:"Play fetch with your dog! Have fun!",color:yellow}
+tellraw @a {text:""}
+tellraw @a {text:"- only works in survival",color:"gray"}
+tellraw @a {text:"- this message will only run once!",color:"gray"}
+tellraw @a {text:""}
