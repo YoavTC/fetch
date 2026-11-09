@@ -5,7 +5,6 @@
 		"R": "minecraft:resin_clump"
 	},
 	"pattern": [" R ", "RXR", " R "],
-
 	"result": {
 		"id": "snowball",
 		"components": {
@@ -16,7 +15,10 @@
 					"minecraft:custom_data": {
 						"ball": true
 					},
-					"minecraft:item_model": "bone",
+					"minecraft:item_model": "air",
+					"minecraft:item_name": {
+						"text": ""
+					},
 					"!minecraft:consumable": {}
 				}
 			},

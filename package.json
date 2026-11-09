@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"scripts": {
 		"build": "beet",
+		"recipe": "tsx scripts/patchRecipeOutput.ts && prettier src/data/fetch/recipe --write",
 		"dev": "tsx --env-file=.env scripts/dev.ts"
 	},
 	"author": "Yoav TC",
