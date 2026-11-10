@@ -12,3 +12,4 @@ tag @s remove fetch.reached_bat
 data remove entity @s data.fetch
 scoreboard players reset @s fetch.timeout
 effect clear @s speed
+effect clear @s water_breathing
